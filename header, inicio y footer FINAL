@@ -56,74 +56,6 @@ header h1{
     display: inline-flex;
     align-items: center;
 }
-.imagenfooter{
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-}
-.footer-container{
-    width: 100%;
-    max-width: 1100;
-    background-color: #0d0d0d;
-    height: 250px;
-    position: bottom;
-    top: 840px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-    background-color: #0d0d0d;
-}
-.footer-container h2{
-    font-family: "Fjalla One", sans-serif;
-    font-size: 28px;
-    font-weight: bold;
-    color: #732222;
-    text-align: center;
-}
-.footer-container p{
-    color: #F0F2F2;
-    line-height: 1.6;
-    font-family: "NTR", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-}
-
-.subscribe-form {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-}
-
-.subscribe-form input[type="email"] {
-    padding: 10px;
-    font-size: 1em;
-    border:#F0F2F2;
-    font-family: "NTR", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.subscribe-form button {
-    padding: 10px 20px;
-    font-size: 1em;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    background-color: #ff5722;
-    color: white;
-    cursor: pointer;
-}
-
-.subscribe-form button:hover {
-    background-color: #732222;
-}
-
-.footer-redes{
-    list-style: none;
-    display: inline-block;
-    margin-right: 10px;
-}
 
 *{
     margin: 0;
@@ -166,7 +98,6 @@ header h1{
     height: 100vh;
 }
 }
-
 
 .section {
     font-family: Arial, sans-serif;
@@ -232,4 +163,94 @@ header h1{
     font-family: "NTR", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+.imagenfooter{
+    display: block;
+    margin: auto;
+}
+
+.footer-container{
+    width: 100%;
+    max-width: 1100;
+    background-color: #0d0d0d;
+    position: bottom;
+    display: block;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1rem;
+    background-color: #0d0d0d;
+}
+@media (min-width:768px) {
+    .footer-container {
+        display: grid;
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.nosotros h2{
+    font-family: "Fjalla One", sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #732222;
+    text-align: center;
+}
+.nosotros p{
+    color: #F0F2F2;
+    line-height: 1.6;
+    font-family: "NTR", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+.newsletter h2{
+    font-family: "Fjalla One", sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #732222;
+    text-align: center;
+}
+
+.subscribe-form {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe-form input[type="email"] {
+    padding: 10px;
+    font-size: 1em;
+    border:#F0F2F2;
+    font-family: "NTR", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.subscribe-form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #ff5722;
+    color: white;
+    cursor: pointer;
+}
+
+.subscribe-form button:hover {
+    background-color: #732222;
+}
+
+.redes h2{
+    font-family: "Fjalla One", sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #732222;
+    text-align: center;
+}
+.redes ul{
+    margin-top: 25px;
+}
+.redes li{
+    display: inline;
+    margin-left: 15%;
 }

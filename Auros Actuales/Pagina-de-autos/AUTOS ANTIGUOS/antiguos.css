@@ -1,0 +1,237 @@
+main{
+    display: flex;
+    justify-content: center;
+}
+.conteiner{
+    width: 90%;
+    max-width: 1800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 125px;
+    row-gap: 20px;
+}
+.conteiner article{
+    border: 1px solid #0d0d0d;
+    background-color: #0d0d0d;
+
+}
+article h1{
+    text-align: center;
+    font-size: 35px;
+    padding: 20px 0;
+    font-weight: bold;
+    font-family: "Fjalla One", sans-serif;
+    text-decoration: underline;
+    background-color: #732222;
+    color: #F0F2F2;
+    border-bottom: 2px solid #F0F2F2;
+}
+article .imagen{
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: #0d0d0d;
+}
+.imagen img{
+    transition: transform 0.2s linear;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+.imagen img:hover{
+    transform: scale(1.2,1.2);
+}
+.data{
+    padding: 30px 0;
+    margin: 50px 0 0 0;
+    background-color: #0d0d0d;
+    border-top: 2px solid #F0F2F2;
+}
+.data p{
+    font-size: 25px;
+    font-family: "NTR", sans-serif;
+    background-color: #0d0d0d;
+    color: #F0F2F2;
+}
+.conteiner .infor{
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+}
+
+.infor .carac{
+    border-top: 2px solid #F0F2F2;
+    border-right: 2px solid black;
+    height: 125px;
+    width: 50%;
+    background-color: #732222;
+}
+.carac b{
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+    font-family: "Fjalla One", sans-serif;
+    background-color: #595956;
+    color: #0d0d0d;
+    border-bottom: 2px solid #0d0d0d
+
+}
+.carac p{
+    height: 47%;
+    font-size: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: end;
+    font-family: "Fjalla One", sans-serif;
+    background-color: #732222;
+    color: #F0F2F2;
+}
+.carac .motor{
+    text-align: center;
+    font-size: 40px;
+}
+
+
+.gusta{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    background-color: #0d0d0d;
+    position: relative;
+    bottom: 20px;
+}
+button{
+    cursor: pointer;
+    height: 50px;
+    width: 100%;
+    background-color: #595956;
+    color: #F0F2F2;
+    font-size: 30px;
+    font-family: "Fjalla One", sans-serif;
+    border: none;
+    border-radius: 0px 0px 50px 50px ;
+    transition: all 0.2s linear;
+}
+button:hover{
+    box-shadow: 0px 5px 10px #8B0000;
+    background-color: #8B0000;
+}
+
+.me{
+    grid-column-start: 3;
+}
+.me:hover{
+    background-color: #006400;
+    box-shadow: 0px 5px 10px #006400;
+}
+.emoji {
+    background-color: transparent;
+    position: absolute;
+    top: -10px;
+    left: 29%;
+    font-size: 50px;
+    opacity: 1;
+    animation: moveAndFade 1.5s ease ;
+}
+.emoji2{
+    background-color: transparent;
+    position: absolute;
+    top: -10px;
+    left: 67%;
+    font-size: 50px;
+    opacity: 1;
+    animation: moveAndFade 1.5s ease;
+}
+
+@keyframes moveAndFade {
+    0% {
+    opacity: 0;
+    }
+    50%{
+    opacity: 1;
+    }
+    100%{
+    opacity: 0;
+    }
+}
+@media only screen and (max-width: 1750px){
+    .conteiner .carac p{
+        font-size: 35px;
+    }
+}
+@media only screen and (max-width: 1533px){
+    .conteiner .carac .motor{
+        font-size: 25px;
+    }
+    .carac b{
+        font-size: 19px;
+    }
+    .emoji{
+        left: 28%;
+    }
+}
+@media only screen and (max-width: 1390px){
+    button{
+        font-size: 25px;
+    }
+
+}
+@media only screen and (max-width: 1110px){
+    button{
+        font-size: 20px;
+    }
+    #puerta{
+        font-size: 30px;
+    }
+    .emoji{
+        left: 26%;
+    }
+}
+@media only screen and (max-width: 660px){
+    .conteiner{
+        top: 130px;
+        width: 95%;
+        left: 2.5%;
+    }
+    article h1{
+        width: 95%;
+        font-size: 23px;
+    }
+    article .imagen{
+        width: 95%;
+    }
+    .data{
+        width: 95%;
+    }
+    .conteiner .infor{
+        width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .gusta{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        width: 95%;
+    }
+    button{
+        border-radius: 0px 0px 20px 20px;
+    }
+    .me{
+        grid-column-start: 2;
+    }
+    .emoji{
+        position: absolute;
+        margin-left: -47px;
+        top: 0;
+        font-size: 40px; 
+    }
+    .emoji2{
+        left: 75%;
+        top: 0;
+        font-size: 40px;
+    }
+}

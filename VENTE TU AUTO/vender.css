@@ -1,0 +1,86 @@
+main{
+    background-color: #F0F2F2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulo{
+    width: 100%;
+    max-width: 1600px;
+    text-align: center;
+    font-size: 25px;
+    color: #F0F2F2;
+    background-color: #0d0d0d;
+    position: relative;
+    top: 130px;
+    border: 2px solid black;
+}
+.usuario, .auto{
+    background-color: #0d0d0d;
+}
+h2{
+    text-align: center;
+    margin-bottom: 25px;
+    color: #F0F2F2;
+    font-size: 30px;
+}
+
+.conteiner{
+    width: 100%;
+    max-width: 1600px;
+    position: relative;
+    top: 150px;
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid black; */
+}
+label{
+    font-size: 25px;
+    margin-left: 20px;
+    color: #F0F2F2;
+    position: relative;
+    top: 5px;
+}
+input,select{
+    height: 30px;
+    border-radius: 10px;
+    background-color: #732222;
+}
+textarea{
+    background-color: #732222;
+}
+label, input, select, textarea{
+    margin-bottom: 20px;
+}
+#comb{
+    top: 0;
+}
+.botones{
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    padding: 30px;
+    background-color: #0d0d0d;
+}
+.boton{
+    height: 50px;
+    width: 20%;
+}
+.elegir{
+    position: relative;
+    top: 7px;
+    margin: 0 5px;
+    margin-bottom: 40px;
+}
+b{
+    font-size: 25px;
+    color: #732222;
+}
+.imagen{
+    background-color: #0d0d0d;
+    color: #F0F2F2;
+}
+footer{
+    height: 200px;
+    background-color: #F0F2F2;
+}

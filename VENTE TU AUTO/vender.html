@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vende tu auto</title>
+    <link rel="stylesheet" href="header y footer (Vende tu auto).css">
+    <link rel="stylesheet" href="vender.css">
+</head>
+<body>
+    <header>
+        <img src="img/VITESSENGINElogo.jpeg" alt="Logo principal" height="120" style="background-color: transparent;">
+        <nav>
+            <a href="#">INICIO</a>
+            <a href="#">AUTOS ACTUALES</a>
+            <a href="#">AUTOS ANTIGUOS</a>
+            <a href="#">NOTICIAS</a>
+            <a href="#" id="vender">VENDE TU AUTO</a>
+        </nav>
+        <h1>VITESSEENGINE</h1>
+    </header>
+    <main>
+        <div class="titulo">
+            <h1>PUBLICAR AUTOMOVIL</h1>
+            <h3>Completar el siguiente formulario para publicar su automovil en nuestra pagina</h3>
+        </div>
+        <section class="conteiner">
+            <form  name="formulario" action="https://formspree.io/f/mqkrvkrg" method="POST">
+                <div class="usuario">
+                <h2>SOBRE EL VENDEDOR</h2>
+                <label for="nombre">NOMBRE</label>
+                <input type="text" id="nombre" name="nombre">
+                <label for="apellido">APELLIDO</label>
+                <input type="text" id="apellido" name="apellido" > <br>
+                <label for="dni">DNI</label>
+                <input type="number" maxlength="10" id="dni" name="dni"><br>
+                <label for="num">NUMERO DE TELEFONO</label>
+                <input type="number" id="num" name="num" ><br>
+                <label for="mail">CORREO ELECTRONICO</label>
+                <input type="email" id="mail" name="mail"><br>
+                <label for="pais">NACIONALIDAD</label>
+                <input type="text" id="pais" name="pais"><br>
+                <label for="Provincia">PROVINCIA</label>
+                <input type="text" id="Provincia" name="Provincia">
+                <label for="ciudad">CIUDAD</label>
+                <input type="text" id="ciudad" name="ciudad">
+                <label for="casa">DIRECCION</label>
+                <input type="text" id="casa" name="casa"><br>
+                </div>
+
+
+                <div class="auto">
+                <h2>SOBRE EL AUTO</h2>
+                <label for="marca">MARCA</label>
+                <input type="text" id="marca" name="marca">
+                <label for="año">AÑO</label>
+                <input type="text" id="anio" name="marca">
+                <label for="modelo">MODELO</label>
+                <input type="text" id="modelo" name="marca"> <br>
+                <label for="motor">MOTOR</label>
+                <input type="text" id="motor" name="motor"><br>
+                <label for="carroceria">CARROCERIA</label>
+                <select name="carroceria" id="carroceria">
+                    <option value="novale" disabled selected>Seleccione una opcion</option>
+                    <option value="1">Micro</option>
+                    <option value="2">Hatchback</option>
+                    <option value="3">Crossover</option>
+                    <option value="4">Sedan</option>
+                    <option value="5">Coupe</option>
+                    <option value="6">Suv</option>
+                    <option value="7">4x4</option>
+                    <option value="8">Pick-ip</option>
+                    <option value="9">Familiar</option>
+                    <option value="10">Monovolumen</option>
+                    <option value="11">sport</option>
+                    <option value="14">Muscle</option>
+                    <option value="15">Limusina</option>
+                    <option value="16">Otra Carroceria</option>
+                </select><br>
+                <label for="transmision">TRANSMISION</label>
+                <select name="trasmision" id="transmision">
+                    <option value="0" disabled selected>Seleccione una opcion</option>
+                    <option value="1">Manual</option>
+                    <option value="2">Automatica</option>
+                    <option value="3">Doble Embrague</option>
+                    <option value="4">Manual automatizada</option>
+                    <option value="5">Manual secuencial</option>
+                    <option value="6">Hidraulica</option>
+                </select><br>
+                <label for="VELOCIDADES">CUANTAS VELOCIDADES</label>
+                <input type="text"><br>
+                <label for="combustible" id="comb">COMBUSTIBLE</label>
+                <input type="checkbox" name="Gasolina" value="1" class="elegir"><b>GASOLINA</b>
+                <input type="checkbox" name="Diesel" value="2" class="elegir"> <b>DIESEL</b>
+                <input type="checkbox" name="Electrico" value="3" class="elegir"> <b>ELECTRICO </b>  <br>
+                <textarea name="descripcion" id="descripcion" rows="10" cols="100">DESCRIPCION SOBRE EL AUTO</textarea><br>
+                <label for="auto">FOTOS DEL AUTO</label>
+                <input type="file" class="imagen">
+                <input type="file" class="imagen">
+                <input type="file" class="imagen">
+                </div>
+                <br>
+                <b id="error"></b>
+                <br>
+                <div class="botones">
+                <input type="button" class="boton" id="enviar" value="ENVAR" onclick="validarfor()">
+                <input type="reset" class="boton" value="RESTABLECER FORMULARIO">
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <hr style="position: relative; top: 200px;">
+        <div class="footer-container">
+            <div class="nosotros">
+                <h2>NOSOTROS</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam eius repellat temporibus ducimus numquam repudiandae, minus nam ad laudantium voluptatibus provident.</p>
+            </div>
+            <div class="newsletter">
+                    <h2>NEWSLETTER</h2>
+                    <form action="#" method="post" class="subscribe-form">
+                        <input type="email" name="email" placeholder="Ingresa tu email" required>
+                        <button type="submit">Suscribir</button>
+                    </form>
+            </div>
+            <div class="redes">
+                <h2>REDES</h2>
+                <ul>
+                    <li><a href="#" class="icono"><img src="img/instagram.png" height="50" target="_blank" class="social"></a></li>
+                    <li><a href="#" class="icono"><img src="img/whatsapp.png" height="50" target="_blank" class="social"></a></li>
+                    <li><a href="#" class="icono"><img src="img/facebook.png" height="50" target="_blank" class="social"></a></li>
+                    <li><a href="#" class="icono"><img src="img/X.png" height="50" target="_blank" class="social"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="vender.js"></script>
+</body>
+</html>

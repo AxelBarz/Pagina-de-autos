@@ -13,27 +13,30 @@ main{
     background-color: #0d0d0d;
     position: relative;
     top: 130px;
+
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    top: 140px;
+    display: flex;
+    justify-content: center;
     border: 2px solid black;
+    background-color: #0d0d0d;
 }
 .usuario, .auto{
     background-color: #0d0d0d;
 }
-h2{
+.titulofor{
     text-align: center;
     margin-bottom: 25px;
     color: #F0F2F2;
     font-size: 30px;
+    background-color: #732222;
 }
 
-.conteiner{
-    width: 100%;
-    max-width: 1600px;
-    position: relative;
-    top: 150px;
-    display: flex;
-    justify-content: center;
-    /* border: 2px solid black; */
-}
+
 label{
     font-size: 25px;
     margin-left: 20px;
@@ -55,9 +58,14 @@ label, input, select, textarea{
 #comb{
     top: 0;
 }
+#motor, #transmision{
+    width: 30%;
+}
 .botones{
     display: flex;
     justify-content: center;
+    position: relative;
+    bottom: 20px;
     column-gap: 20px;
     padding: 30px;
     background-color: #0d0d0d;
@@ -80,6 +88,14 @@ b{
     background-color: #0d0d0d;
     color: #F0F2F2;
 }
+#error{
+    text-align: center;
+    background-color: #0d0d0d;
+    height: 50px ;
+    font-size: 30px;
+    color: #F0F2F2;
+}
+
 footer{
     height: 200px;
     background-color: #F0F2F2;

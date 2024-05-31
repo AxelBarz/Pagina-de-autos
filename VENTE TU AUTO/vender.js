@@ -1,88 +1,104 @@
-function validarfor(){
-    parrafo=document.getElementById("error")
-    //Analizar nombre
-    if(document.formulario.nombre.value.length <=2){
-        document.formulario.nombre.focus()
-        parrafo.innerHTML="NOMBRE INCORRECTO"
-        return
+function validarFormulario() {
+    const parrafo = document.getElementById("error");
+    parrafo.innerHTML = "";
+  
+    // Validar nombre
+    if (document.formulario.nombre.value.trim() === "") {
+      document.formulario.nombre.focus();
+      parrafo.innerHTML = "NOMBRE INCORRECTO";
+      return false;
     }
-    //Apellido
-    if(document.formulario.apellido.value.length <=3){
-        document.formulario.apellido.focus()
-        parrafo.innerHTML= "APELLIDO INCORRECTO"
-        return
+  
+    // Validar apellido
+    if (document.formulario.apellido.value.trim() === "") {
+      document.formulario.apellido.focus();
+      parrafo.innerHTML = "APELLIDO INCORRECTO";
+      return false;
     }
-    //DNI
-    let dnient=parseInt(document.formulario.dni.value)
-    if(isNaN(dnient)){
-        document.formulario.dni.focus()
-        parrafo.innerHTML="DNI INEXISTENTE"
-        return
-    }else{
-        if(document.formulario.dni.value.length >= 9){
-            document.formulario.dni.focus()
-            parrafo.innerHTML="EL DNI QUE ESCRBISTE NO EXISTE POR FAVOR INGRESE NUEVAMENTE SU DNI"
-            return
-        }
+  
+    // Validar DNI
+    const dni = document.formulario.dni.value.trim();
+    if (dni === "" || isNaN(dni) || dni.length != 8) {
+      document.formulario.dni.focus();
+      parrafo.innerHTML = "DNI INEXISTENTE";
+      return false;
     }
-    //NUMERO DE TELEFONO
-    // let telefono=parseInt(document.formulario.num.value)
-    // if(isNaN(telefono)){
-    //     document.formulario.num.focus()
-    //     parrafo.innerHTML="NUMERO DE TELEFONO INEXISTENTE"
-    //     return
-    // }else{
-    //     if(document.formulario.num.value.length >= 12){
-    //         document.formulario.num.focus()
-    //         parrafo.innerHTML="EL DNI QUE ESCRBISTE NO EXISTE POR FAVOR INGRESE NUEVAMENTE SU DNI"
-    //         return
-    //     }
-    // }
-    //CORREO ELECTRONICO 
+  
+    // Validar número de teléfono
+    const num = document.formulario.num.value.trim();
+    if (num === "" || isNaN(num) || num.length != 9) {
+      document.formulario.num.focus();
+      parrafo.innerHTML = "NUMERO DE TELEFONO INEXISTENTE";
+      return false;
+    }
+  
+    // Validar email
+    const email = document.formulario.email.value.trim();
+    if (!email.includes('@') || !email.includes('.')) {
+      document.formulario.email.focus();
+      parrafo.innerHTML = "EMAIL INCORRECTO";
+      return false;
+    }
+  
+    // Validar país
+    if (document.formulario.pais.value.trim() === "") {
+      document.formulario.pais.focus();
+      parrafo.innerHTML = "PAIS INCORRECTO";
+      return false;
+    }
+  
+  
+    // Validar marca
+    if (document.formulario.marca.value.trim() === "") {
+      document.formulario.marca.focus();
+      parrafo.innerHTML = "NO AGREGO LA MARCA DEL AUTOMOVIL";
+      return false;
+    }
+  
+    // Validar año
+    const anio = parseInt(document.formulario.anio.value.trim());
+    if (isNaN(anio) || anio < 1900 || anio > new Date().getFullYear()) {
+      document.formulario.anio.focus();
+      parrafo.innerHTML = "AÑO DEL AUTOMOVIL INVALIDO";
+      return false;
+    }
+  
+    // Validar modelo
+    if (document.formulario.modelo.value.trim() === "") {
+      document.formulario.modelo.focus();
+      parrafo.innerHTML = "NO AGREGO EL MODELO DEL AUTOMOVIL";
+      return false;
+    }
+  
+    // Validar tipo de motor
+    if (document.formulario.motor.selectedIndex === 0) {
+      document.formulario.motor.focus();
+      parrafo.innerHTML = "NO SELECCIONO UNA OPCIÓN DE MOTOR";
+      return false;
+    }
+  
+    // Validar transmisión
+    if (document.formulario.transmision.selectedIndex === 0) {
+      document.formulario.transmision.focus();
+      parrafo.innerHTML = "NO SELECCIONO UNA OPCIÓN DE TRANSMISIÓN";
+      return false;
+    }
+  
+    // Validar checkbox de combustibles
+    const combustibles = document.querySelectorAll('input[name="combustible"]:checked');
+    if (combustibles.length === 0) {
+      parrafo.innerHTML = "NO SELECCIONO NINGUNA OPCIÓN DE COMBUSTIBLE";
+      return false;
+    }
+  
+    // Validar descripción
+    if (document.formulario.descripcion.value.trim() === "") {
+      document.formulario.descripcion.focus();
+      parrafo.innerHTML = "NO AGREGO UNA DESCRIPCIÓN DEL AUTOMOVIL";
+      return false;
+    }
+  
+    parrafo.innerHTML = "GRACIAS POR COMPLETAR EL FORMULARIO PARA PUBLICAR SU AUTOMOVIL";
+    document.formulario.submit();
+  }
 
-
-    //MARCA 
-    if(document.formulario.marca.value.length=="0"){
-        document.formulario.marca.focus()
-        parrafo.innerHTML="NO AGREGÓ LA MARCA DEL AUTOMOVIL"
-        return
-    }
-    //AÑO
-    let año=parseInt(document.formulario.anio.value)
-    if(año<=1900){
-        document.formulario.anio.focus()
-        parrafo.innerHTML="EN ESE AÑO NO SE HAN INVENTADO LOS AUTOS"
-        return
-    }
-    else if(año>=2024){
-        document.formulario.anio.focus()
-        parrafo.innerHTML="TODAVIA NO A SALIDO AL MERCADO EL AUTOMOVIL"
-        return
-    }
-    //MODELO
-    if(document.formulario.modelo.value.length=="0"){
-        document.formulario.modelo.focus()
-        parrafo.innerHTML="NO AGREGÓ EL MODELO DEL AUTOMOVIL"
-        return
-    }
-    //CARROCERIA Y TRANSMISION
-    if(document.formulario.carroceria.selectedIndex==0){
-        document.formulario.carroceria.focus()
-        parrafo.innerHTML="NO SELECCIONO UNA OPCION"
-        return
-    }
-    if(document.formulario.transmision.selectedIndex==0){
-        document.formulario.transmision.focus()
-        parrafo.innerHTML="NO SELECCIONO UNA OPCION"
-        return
-    }
-    //COMBUSTIBLE
-    if(!document.formulario.comb.checked){
-        document.formulario.comb.focus()
-        parrafo.innerHTML=" NO SELECCION UNA OPCION DEL COMBUSTIBLE"
-        return
-    }
-
-    parrafo.innerHTML = "GRACIAS POR COMPLETAR EL FORMULARIO PARA PUBLICAR SU AUTOMOVIL"
-    document.formulario.submit()
-}

@@ -8,9 +8,10 @@
     <link rel="icon" type="png" href="imagenes/pistonicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=NTR&family=Staatliches&family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Fjalla+One&family=NTR&family=Staatliches&family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=NTR&family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=NTR&family=Staatliches&family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=BenchNine:wght@300;400;700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=NTR&family=Staatliches&family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -63,8 +64,10 @@
                 </div>
             </article>
             <div class="evaluar">
-                <button class="elejir">TE GUSTA</button>
-                <button>NO TE GUSTA</button>
+                <p id="emoji-container"></p>
+                <button class="positivo" id="gusta-boton">TE GUSTA</button>
+                <button id="nogusta-boton">NO TE GUSTA</button>
+                <p id="emoji-container2"></p>
             </div>
             
             <article>
@@ -103,8 +106,10 @@
                 </div>
             </article>
             <div class="evaluar">
-                <button class="elejir">TE GUSTA</button>
-                <button>NO TE GUSTA</button>
+                <p id="emoji-container3"></p>
+                <button class="positivo" id="gusta-boton2">TE GUSTA</button>
+                <button id="nogusta-boton2">NO TE GUSTA</button>
+                <p id="emoji-container4"></p>
             </div>
 
             <article>
@@ -143,8 +148,10 @@
                     </div>
             </article>
             <div class="evaluar">
-                <button class="elejir">TE GUSTA</button>
-                <button>NO TE GUSTA</button>
+                <p id="emoji-container5"></p>
+                <button class="positivo" id="gusta-boton3">TE GUSTA</button>
+                <button id="nogusta-boton3">NO TE GUSTA</button>
+                <p id="emoji-container6"></p>
             </div>
 
             <article>
@@ -183,11 +190,14 @@
                 </div>
             </article>
             <div class="evaluar">
-                <button class="elejir">TE GUSTA</button>
-                <button>NO TE GUSTA</button>
+                <p id="emoji-container7"></p>
+                <button class="positivo" id="gusta-boton4">TE GUSTA</button>
+                <button id="nogusta-boton4">NO TE GUSTA</button>
+                <p id="emoji-container8"></p>
             </div>
        </section> 
     </main>
+
     <footer>
         <hr style="position: relative; top: 150px;" >
         <div class="footer-container">
@@ -214,5 +224,6 @@
             </div>
         </div>
     </footer>
+    <script src="autosnuevos.js"></script>
 </body>
 </html>

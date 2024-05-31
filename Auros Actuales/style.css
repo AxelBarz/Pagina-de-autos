@@ -89,6 +89,7 @@ main{
 article h1{
     text-align: center;
     font-size: 35px;
+    padding: 20px 0;
     font-family: "Fjalla One", sans-serif;
     font-weight: bold;
     text-decoration: underline;
@@ -132,14 +133,13 @@ article .imagenes{
 .container .cosas{
     display: flex;
     flex-direction: row;
-    flex-wrap:nowrap;
     justify-content:space-around;
 }
 
 .cosas .caracteristicas{
-    border-top: 2px solido #f0f2f2;
-    border-right: 2px solido black;
-    height: 125px;
+    border-top: 2px solid #f0f2f2;
+    border-right: 2px solid black;
+    height: 120px;
     width: 50%;
     background-color: #732222;
     
@@ -147,18 +147,15 @@ article .imagenes{
 .caracteristicas b{
     display: flex;
     justify-content: center;
-    font-size: 20px;
+    font-size: 22px;
     font-family: "Fjalla One", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
     background-color: #595956;
-    color: #f0f2f2;
+    color:#0d0d0d;
     border-bottom: 2px solid #0d0d0d;
 }
 .caracteristicas p{
-    height: 45%;
-    font-size: 45px;
+    height: 47%;
+    font-size: 60px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -185,48 +182,138 @@ article .imagenes{
     .caracteristicas b{
         font-size: 15px;
     }
+    .emoji{
+        font-size: 28px;
+    }
 }
 
 .evaluar{
     display: grid;
     grid-template-columns: repeat(6,1fr);
     background-color: #0d0d0d;
-    color: white;
     position: relative;
     bottom: 20px;
 }
-.evaluar button{
-    color: white;
-    border-radius: 5px 0 5px 0;
+button{
     cursor: pointer;
-    padding: 5px 5px;
+    height: 50px;
+    width: 100%;
+    background-color: #595956;
+    color:#f0f2f2;
+    font-size: 28px;
+    font-family: "Fjalla One",sans-serif;
+    border:none;
+    border-radius: 0 0 50px 50px;
+    transition: all 0.2s linear;
 }
 
-.evaluar button:hover{
+button:hover{
     box-shadow: 0px 5px 10px 0px #8b0000; 
     background-color: #8b0000;
 }
 
 @media only screen and (max-width: 1390px) {
     button{
-        font-size: 20px;
+        font-size: 25px;
     }
 }
 
 @media only screen and (max-width: 1110px) {
     button{
-        font-size: 15px;
+        font-size: 20px;
+    }
+    #puerta{
+        font-size: 30px;
+    }
+    .emoji{
+        left: 26%;
     }
 }
 
-.evaluar .elejir{
+.positivo{
     grid-column-start: 3;
 }
-.evaluar .elejir:hover{
+.positivo:hover{
     background-color: #006400;
     box-shadow: 0px 5px 10px #006400;
 }
+@keyframes moveAndFade{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
 
+.emoji{
+    background-color: transparent;
+    position: absolute;
+    top: -10px;
+    left: 29%;
+    font-size: 50px;
+    opacity: 1;
+    animation: moveAndFade 1.5s ease
+}
+
+.emoji2{
+    background-color: transparent;
+    position: absolute;
+    top: -10px;
+    left: 67%;
+    font-size: 50px;
+    opacity: 1;
+    animation: moveAndFade 1.5s ease;
+}
+
+@media only screen and (max-width:660){
+    article h1{
+    width: 95%;
+    font-size: 23px;
+    }
+    article .imagenes{
+    width: 95%;
+    }
+    .info{
+    width: 95%;
+    }
+    .container{
+        top:130%;
+        width: 95%;
+        left: 2.5%;
+    }
+    .container .cosas{
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+    .evaluar{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 95%;
+    }
+    .evaluar button{
+    border-radius: 0 0 20px 20px;
+    }
+    .positivo{
+    grid-column-start: 2;
+    }
+    .emoji{
+    position: absolute;
+    margin-left: -47px;
+    top: 0;
+    font-size: 40px;
+    }
+    .emoji2{
+        left: 75%;
+        top: 0;
+        font-size: 40px;
+    }
+}
 *{
     margin: 0;
     padding: 0;

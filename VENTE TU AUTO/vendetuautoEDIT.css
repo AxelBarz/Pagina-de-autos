@@ -1,16 +1,16 @@
 main{
-    background-color: #F0F2F2;
+    background-color: #0d0d0d;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.titulo{
+.titulo h1{
     width: 100%;
     max-width: 1600px;
     text-align: center;
     font-size: 25px;
     color: #F0F2F2;
-    background-color: #0d0d0d;
+    background-color: #732222;
     position: relative;
     top: 130px;
     font-family: "Fjalla One" , "sans-serif";
@@ -131,7 +131,7 @@ b{
 
 footer{
     height: 200px;
-    background-color: #F0F2F2;
+    background-color: #0d0d0d;
 }
 
 @media (min-width: 768px) {

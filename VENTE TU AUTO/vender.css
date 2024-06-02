@@ -1,5 +1,5 @@
 main{
-    background-color: #F0F2F2;
+    background-color: #595956;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,7 +13,12 @@ main{
     background-color: #0d0d0d;
     position: relative;
     top: 130px;
+    font-family: "Fjalla One", sans-serif;
 
+}
+.titulo h3{
+    font-size: smaller;
+    font-weight: lighter;
 }
 .container{
     width: 100%;
@@ -24,6 +29,7 @@ main{
     justify-content: center;
     border: 2px solid black;
     background-color: #0d0d0d;
+    font-family: "NTR", sans-serif;
 }
 .usuario, .auto{
     background-color: #0d0d0d;
@@ -34,6 +40,8 @@ main{
     color: #F0F2F2;
     font-size: 30px;
     background-color: #732222;
+    font-family: "Staatliches", sans-serif;
+    font-weight: 100;
 }
 
 
@@ -50,7 +58,17 @@ input,select{
     background-color: #732222;
 }
 textarea{
-    background-color: #732222;
+    background-color: #595956;
+    color: #0d0d0d;
+    font-family: "Staatliches", sans-serif;
+    font-weight:100;
+    font-size:larger ;
+    text-align: center;
+    display: block; 
+    margin: 0 auto; 
+    width: 950px;
+    height: 200px; 
+    resize: none;
 }
 label, input, select, textarea{
     margin-bottom: 20px;
@@ -76,9 +94,10 @@ label, input, select, textarea{
 }
 .elegir{
     position: relative;
-    top: 7px;
+    top: 5px;
     margin: 0 5px;
     margin-bottom: 40px;
+    transform: scale(1.4,1.4);
 }
 b{
     font-size: 25px;
@@ -87,6 +106,13 @@ b{
 .imagen{
     background-color: #0d0d0d;
     color: #F0F2F2;
+}
+#browse {
+    font-size: 17px;
+    background-color: #0d0d0d;
+    color: #F0F2F2;
+    display: block; 
+    margin: 0 auto; 
 }
 #error{
     text-align: center;
@@ -98,5 +124,5 @@ b{
 
 footer{
     height: 200px;
-    background-color: #F0F2F2;
+    background-color: #595956;
 }

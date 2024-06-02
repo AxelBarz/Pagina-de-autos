@@ -426,10 +426,12 @@ button:hover{
 }
 .redes ul{
     margin-top: 25px;
+    margin-left: 4%;
 }
 .redes li{
     display: inline;
     margin-left: 10%;
+    margin-right: 5%;
 }
 
 .icono .social{

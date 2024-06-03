@@ -78,10 +78,13 @@ header h1{
     display: flex;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
+    position: relative;
+    top: 100px;
     
 }
 
 .grid h1 {
+    height: 70px;
     text-align: center;
     color: #F0F2F2;
     background-color: #732222;
@@ -97,6 +100,18 @@ header h1{
     font-size: 14px;
     color: #0d0d0d;
 }
+.noticias a{
+    text-decoration: none;
+} 
+h2{
+    color: #F0F2F2;
+    text-decoration: none;
+    transition: all 0.3s linear;
+}
+h2:hover{
+    background-color: #F0F2F2;
+    color: #0d0d0d;
+}
 
 .video-contenedor{
     display: flex;
@@ -105,9 +120,12 @@ header h1{
     margin-top: 20%;
     margin: 10px;
     gap: 5%;
+    position: relative;
+    top: 150px;
 }
 
 .footer-container{
+    border-top: 2px solid #F0F2F2;
     width: 100%;
     max-width: 1100;
     background-color: #0d0d0d;
